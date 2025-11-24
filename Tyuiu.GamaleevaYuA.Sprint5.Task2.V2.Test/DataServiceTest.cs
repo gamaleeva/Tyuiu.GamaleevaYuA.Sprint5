@@ -1,13 +1,12 @@
-﻿using System.IO;
-namespace Tyuiu.GamaleevaYuA.Sprint5.Task1.V12.Test
+﻿namespace Tyuiu.GamaleevaYuA.Sprint5.Task2.V2.Test
 {
     [TestClass]
     public sealed class DataServiceTest
     {
         [TestMethod]
-        public void CheckFileExist()
+        public void CheckedFileExists()
         {
-            string[] paths = { "C:", "Users", "Юлия", "AppData", "Local", "Temp", "OutPutFileTask1.txt" };
+            string[] paths = { "C:", "Users", "Юлия", "AppData", "Local", "Temp", "OutPutFileTask2.csv" };
             string path = Path.Combine(paths);
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;

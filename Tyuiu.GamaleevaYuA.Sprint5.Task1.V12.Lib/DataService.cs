@@ -6,7 +6,7 @@ namespace Tyuiu.GamaleevaYuA.Sprint5.Task1.V12.Lib
         public string SaveToFileTextData(int startValue, int stopValue)
         {
 
-            string[] paths = { Path.GetTempPath(), "OutPutFileTask0.txt" };
+            string[] paths = { Path.GetTempPath(), "OutPutFileTask1.txt" };
             string path = Path.Combine(paths);
             FileInfo fileInfo = new FileInfo(path);
             bool exist = fileInfo.Exists;
