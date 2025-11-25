@@ -21,20 +21,24 @@ namespace Tyuiu.GamaleevaYuA.Sprint5.Task7.V30.Lib
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    for (int i = 1;  i < line.Length; i++)
+                    for (int i = 0; i < line.Length - 2; i++)
                     {
-                        
-                        if (line[i - 1] == ' ' && char.IsDigit(line[i]) && line[i + 1] == ' ')
+                     
+
+                        if (line[i] == ' ' && char.IsDigit(line[i + 1]) && line[i + 2] == ' ') 
                         {
                             strline += "9";
                         }
+
                         else
                         {
-                            strline += line[i - 1];
+                            strline += line[i + 1];
                         }
-                       
+                        
+
                     }
-                    File.AppendAllText(pathsaved, strline + Environment.NewLine);
+
+                    File.AppendAllText(pathsaved, line[0] + strline + "9" + Environment.NewLine);
                     strline = "";
                 }
             }
