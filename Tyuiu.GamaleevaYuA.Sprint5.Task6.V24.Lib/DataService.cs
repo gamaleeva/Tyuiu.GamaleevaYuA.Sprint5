@@ -1,4 +1,6 @@
 ﻿using System.IO;
+using System.Net.Mail;
+using System.Runtime.Intrinsics.X86;
 using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.GamaleevaYuA.Sprint5.Task6.V24.Lib
 {
@@ -12,12 +14,16 @@ namespace Tyuiu.GamaleevaYuA.Sprint5.Task6.V24.Lib
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    for (int i = 0; i < line.Length - 4; i++)
+                    for (int i = 0; i < line.Length - 6; i++)
                     {
-                        if (char.IsDigit(line[i]) && char.IsDigit(line[i + 1]) && char.IsDigit(line[i + 2]) && char.IsDigit(line[i + 3]) && char.IsDigit(line[i + 4]))
+                        if (!char.IsDigit(line[i]) && char.IsDigit(line[i + 1]) && char.IsDigit(line[i + 2]) && char.IsDigit(line[i + 3]) && char.IsDigit(line[i + 4]) && char.IsDigit(line[i + 5]) && !char.IsDigit(line[i + 6]))
                         {
                             count++;
                         }
+                        
+                        
+                           
+                        
                     }
 
                 }

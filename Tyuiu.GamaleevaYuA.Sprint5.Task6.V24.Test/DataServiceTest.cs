@@ -11,7 +11,7 @@ namespace Tyuiu.GamaleevaYuA.Sprint5.Task6.V24.Test
             string path = Path.Combine(paths);
             DataService ds = new DataService();
             int res = ds.LoadFromDataFile(path);
-            int wait = 4;
+            int wait = 2;
             Assert.AreEqual(wait, res);
         }
 
