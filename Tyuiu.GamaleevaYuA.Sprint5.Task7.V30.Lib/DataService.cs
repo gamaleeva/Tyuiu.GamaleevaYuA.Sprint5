@@ -21,7 +21,7 @@ namespace Tyuiu.GamaleevaYuA.Sprint5.Task7.V30.Lib
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    for (int i = 1;  i < line.Length - 1; i++)
+                    for (int i = 1;  i < line.Length; i++)
                     {
                         
                         if (line[i - 1] == ' ' && char.IsDigit(line[i]) && line[i + 1] == ' ')
@@ -30,7 +30,7 @@ namespace Tyuiu.GamaleevaYuA.Sprint5.Task7.V30.Lib
                         }
                         else
                         {
-                            strline += line[i];
+                            strline += line[i - 1];
                         }
                        
                     }
